@@ -27,13 +27,13 @@
         var token = encodeURI(url.searchParams.get("token"));
         console.log("token " + token);
         
-        const script = retrievedText.replaceAll('{token}', token);
+        const script = retrievedText.replaceAll('{token}', encodeURI(token));
         download(script, 'text/javascript', 'main.user.js');
       }
 
       $(document).ready(function() {
         $("#install").click(downloadScript);
-        console.log('ready5'); 
+        console.log('ready6'); 
       });
     </script>
   </head>
