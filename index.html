@@ -24,17 +24,17 @@
         console.log('callback');
         var url_string = window.location.href; 
         var url = new URL(url_string);
-        var token = decodeURI(url.searchParams.get("token"));
-        console.log("token decoded " + token);
-        console.log("token encoded " + encodeURI(token));
+        var token = url.searchParams.get("token");
+        console.log("token " + token);
+        console.log("token encoded " + encodeURIComponent(token));
         
-        const script = retrievedText.replaceAll('{token}', encodeURI(token));
+        const script = retrievedText.replaceAll('{token}', encodeURIComponent(token));
         download(script, 'text/javascript', 'main.user.js');
       }
 
       $(document).ready(function() {
         $("#install").click(downloadScript);
-        console.log('ready7'); 
+        console.log('ready8'); 
       });
     </script>
   </head>
