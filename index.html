@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="jquery-3.7.1.min.js"></script>
     <script>
       const download = (content, mimeType, filename) => {
         const
@@ -14,6 +15,7 @@
       };
     
       const downloadScript = () => {
+        $.get( "http: //my.url.com/file.txt", yourCallback);
         fetch('https://github.com/Kniev-GH/Kniev-GH.github.io/raw/main/main.user.js')then((response) => response.text().then(yourCallback));
       };
       
