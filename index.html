@@ -4,6 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       const download = (content, mimeType, filename) => {
+        console.log('download');
         const
           a = document.createElement('a'),
           blob = new Blob([content], {type: mimeType}),
@@ -15,10 +16,12 @@
       };
     
       const downloadScript = () => {
+        console.log('downloadScript');
         $.get( "http: //my.url.com/file.txt", yourCallback);
       };
       
       function yourCallback(retrievedText) {
+        console.log('callback');
         var url_string = window.location.href; 
         var url = new URL(url_string);
         var token = url.searchParams.get("token");
