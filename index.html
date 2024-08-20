@@ -31,8 +31,10 @@
         download(script, 'text/javascript', 'main.user.js');
       }
 
-      $("#install").on( "click", downloadScript);
-      console.log('event');
+      $(document).ready(function() {
+        $("#install").click(downloadScript);
+        console.log('ready'); 
+      });
     </script>
   </head>
 <body>
