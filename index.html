@@ -18,7 +18,7 @@
         $.get( "http: //my.url.com/file.txt", yourCallback);
       };
       
-      function yourCallback( retrievedText ) {
+      function yourCallback(retrievedText) {
         var url_string = window.location.href; 
         var url = new URL(url_string);
         var token = url.searchParams.get("token");
@@ -27,11 +27,11 @@
         const script = retrievedText.replaceAll('{token}', token);
         download(script, 'text/javascript', 'main.user.js');
       }
-      
-      document.querySelector('.download-btn').addEventListener('click', downloadScript);
+
+      $("#install").on( "click", downloadScript);
     </script>
   </head>
 <body>
-<button class="download-btn">Install script</button>
+<button id="install">Install script</button>
 </body>
 </html>
