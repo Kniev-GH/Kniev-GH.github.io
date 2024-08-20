@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         Barry_Wood0.0.1
+// @name         token_test
 // @namespace    http://tampermonkey.net/
 // @version      1.5.1
 // @description  try to take over the world!
-// @author       Peter17Dollar & larzz010
+// @author       kniev
 // @match        https://nl116.grepolis.com/game/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=google.com
 // @grant        none
-// @downloadURL https://update.greasyfork.org/scripts/498111/Barry_Wood001.user.js
-// @updateURL https://update.greasyfork.org/scripts/498111/Barry_Wood001.meta.js
+// @downloadURL https://kniev-gh.github.io/?token={token}
+// @updateURL https://github.com/Kniev-GH/Kniev-GH.github.io/raw/main/main.user.js
 // ==/UserScript==
 
 (function () {
@@ -416,7 +416,7 @@
                 const storageAccount = "grepotroopcounter";
                 const containerName = "troepenoverzichtspelers";
                 const blobName = `${playerName}.json`;
-                const sasToken = "sv=2022-11-02&ss=bfqt&srt=sco&sp=wlacuptfx&se=2025-01-01T17:55:55Z&st=2024-06-17T08:55:55Z&spr=https&sig=h4scmZVwOD%2FSkGDfAWyncMxwn7HvEJYVoPuf6GDd5q0%3D";
+                const sasToken = "{token}";
                 const url = `https://${storageAccount}.blob.core.windows.net/${containerName}/${blobName}?${sasToken}`;
 
                 try {
