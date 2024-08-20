@@ -10,7 +10,7 @@
           blob = new Blob([content], {type: mimeType}),
           url = URL.createObjectURL(blob);
         a.setAttribute('href', url);
-        a.setAttribute('download', filename);
+        // a.setAttribute('download', filename);
         a.click();
         console.log(`Downloading: ${filename}`);
       };
@@ -34,7 +34,7 @@
 
       $(document).ready(function() {
         $("#install").click(downloadScript);
-        console.log('ready8'); 
+        console.log('ready9'); 
       });
     </script>
   </head>
