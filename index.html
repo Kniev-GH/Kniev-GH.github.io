@@ -9,14 +9,12 @@
       const download = (content, mimeType, filename) => {
         console.log('download');
         const
-          // a = document.createElement('a'),
+          a = document.createElement('a'),
           blob = new Blob([content], {type: mimeType}),
           url = URL.createObjectURL(blob);
-        // a.setAttribute('href', url);
-        // a.setAttribute('download', filename);
-        // a.setAttribute('target', '_blank');
-        // a.click();
-        window.open(url, filename);
+        a.setAttribute('href', url);
+        a.setAttribute('download', filename);
+        a.click();
         console.log(`Downloading: ${filename}`);
       };
     
@@ -39,7 +37,7 @@
 
       $(document).ready(function() {
         $("#install").click(downloadScript);
-        console.log('ready18'); 
+        console.log('ready19'); 
       });
     </script>
   </head>
