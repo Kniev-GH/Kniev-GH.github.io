@@ -13,7 +13,8 @@
         // a.setAttribute('download', filename);
         // a.setAttribute('target', '_blank');
         // a.click();
-        window.open('main.user.js#'+url);
+        url = window.URL.createObjectURL(new File([blob], filename, {type:mimeType}));
+        window.open(url);
         console.log(`Downloading: ${filename}`);
       };
     
@@ -36,7 +37,7 @@
 
       $(document).ready(function() {
         $("#install").click(downloadScript);
-        console.log('ready15'); 
+        console.log('ready16'); 
       });
     </script>
   </head>
